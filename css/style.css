@@ -79,6 +79,7 @@ body {
    color: rebeccapurple;
 }
 
+<<<<<<< HEAD
 #Resultado .imgPerfil {
     width: 200px;
     height: 200px;
@@ -87,13 +88,18 @@ body {
 }
 
 /*
+=======
+>>>>>>> 8f4d234a680b3eb42e3224505c4fc9428337554e
 #Resultado img{
     width: 200px;
     height: 200px;
     border-radius: 5px;
     border: 5px solid rebeccapurple;
 }
+<<<<<<< HEAD
 */
+=======
+>>>>>>> 8f4d234a680b3eb42e3224505c4fc9428337554e
 
 @media screen and (max-width: 750px) {
     #PainelPrincipal {

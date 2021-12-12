@@ -25,19 +25,31 @@ btnProcurar.click(function () {
     
 });
 
+<<<<<<< HEAD
 function renderizarPerfil({login, bio, avatar_url, location, html_url}) {
+=======
+function renderizarPerfil({login, bio, avatar_url, location, url}) {
+>>>>>>> 8f4d234a680b3eb42e3224505c4fc9428337554e
     divResultado.empty();  
     divResultado.append(
         $('<img></img>', {
             src: avatar_url,
+<<<<<<< HEAD
             alt: 'Imagem de perfil',
             class: 'imgPerfil'
+=======
+            alt: 'Imagem de perfil'
+>>>>>>> 8f4d234a680b3eb42e3224505c4fc9428337554e
         }),
         $(`<h3>${login}</h3>`),
         $(`<h4>${bio}</h4>`),
         $(`<h4>${location}</h4>`),
+<<<<<<< HEAD
         $(`<h4><a href=${html_url}>${html_url}</a></h4>`)
         
+=======
+        $(`<h4>${url}</h4>`) 
+>>>>>>> 8f4d234a680b3eb42e3224505c4fc9428337554e
     );
 }
 
