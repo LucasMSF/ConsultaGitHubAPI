@@ -26,7 +26,10 @@ btnProcurar.click(function () {
 });
 
 function renderizarPerfil({login, bio, avatar_url, location, html_url}) {
-    divResultado.empty();  
+    divResultado.empty();
+    
+    let msg = 'Não informado!';
+     
     divResultado.append(
         $('<img></img>', {
             src: avatar_url,
@@ -34,8 +37,8 @@ function renderizarPerfil({login, bio, avatar_url, location, html_url}) {
             class: 'imgPerfil'
         }),
         $(`<h3>${login}</h3>`),
-        $(`<h4>${bio}</h4>`),
-        $(`<h4>${location}</h4>`),
+        $(`<h4>${bio ? bio : 'Biografia não informada!'}</h4>`),
+        $(`<h4>${location ? location : 'Localidade não informada!'}</h4>`),
         $(`<h4><a href=${html_url}>${html_url}</a></h4>`)
         
     );
