@@ -18,8 +18,8 @@ btnProcurar.click(function () {
         },
         error: function (erro) {
             console.log(erro);
-            let msgErro = erro.responseJSON.message
-            msgErro == 'Not Found' ? alert('Usuário não encontrado!') : alert('Erro Desconhecido!')
+            let msgErro = erro.responseJSON.message ? erro.responseJSON.message : erro.statusText;
+            msgErro == 'Not Found' ? alert('Usuário não encontrado!') : alert('Erro Desconhecido!');
         }
     });
     
@@ -27,9 +27,8 @@ btnProcurar.click(function () {
 
 function renderizarPerfil({login, bio, avatar_url, location, html_url}) {
     divResultado.empty();
+    divResultado.css({display: 'none'});
     
-    let msg = 'Não informado!';
-     
     divResultado.append(
         $('<img></img>', {
             src: avatar_url,
@@ -42,6 +41,8 @@ function renderizarPerfil({login, bio, avatar_url, location, html_url}) {
         $(`<h4><a href=${html_url}>${html_url}</a></h4>`)
         
     );
+
+    divResultado.fadeIn(400);
 }
 
 
