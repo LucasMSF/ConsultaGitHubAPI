@@ -1,20 +1,13 @@
-<<<<<<< HEAD
 //constante para guardar a URL da requisição
 const URL = 'https://api.github.com/users/';
 //variável para guardar o usuario digitado pelo cliente
 var usuario = '';
 
 //Constantes que armazenam os obejetos da DOM
-=======
-const URL = 'https://api.github.com/users/';
-var usuario = '';
-
->>>>>>> eed290b30a066437aab626a771f7f09211eb89ea
 const txtUsuario = $('#txtUsuario');
 const btnProcurar = $('#btn');
 const divResultado = $('#Resultado')
 
-<<<<<<< HEAD
 //Programando o evento click do Botão
 btnProcurar.click(function () { 
     
@@ -26,23 +19,11 @@ btnProcurar.click(function () {
         type: "GET",
         url: `${URL}${usuario}`,
         //callback de sucesso
-=======
-btnProcurar.click(function () { 
-    
-    usuario = txtUsuario.val();
-
-    $.ajax({
-        type: "GET",
-        url: `${URL}${usuario}`,
->>>>>>> eed290b30a066437aab626a771f7f09211eb89ea
         success: function (resposta) {
             console.log(resposta)
             renderizarPerfil(resposta)    
         },
-<<<<<<< HEAD
         //callback de erro
-=======
->>>>>>> eed290b30a066437aab626a771f7f09211eb89ea
         error: function (erro) {
             console.log(erro);
             let msgErro = erro.responseJSON.message ? erro.responseJSON.message : erro.statusText;
@@ -52,10 +33,7 @@ btnProcurar.click(function () {
     
 });
 
-<<<<<<< HEAD
 //Função resposável por adicionar os elementos HTML com os dados recebidos da requisição
-=======
->>>>>>> eed290b30a066437aab626a771f7f09211eb89ea
 function renderizarPerfil({login, bio, avatar_url, location, html_url}) {
     divResultado.empty();
     divResultado.css({display: 'none'});
@@ -69,17 +47,10 @@ function renderizarPerfil({login, bio, avatar_url, location, html_url}) {
         $(`<h3>${login}</h3>`),
         $(`<h4>${bio ? bio : 'Biografia não informada!'}</h4>`),
         $(`<h4>${location ? location : 'Localidade não informada!'}</h4>`),
-<<<<<<< HEAD
         $(`<h4><a href=${html_url} target="_blank">${html_url}</a></h4>`)
     );
 
     //Animção de FadeIn 
-=======
-        $(`<h4><a href=${html_url}>${html_url}</a></h4>`)
-        
-    );
-
->>>>>>> eed290b30a066437aab626a771f7f09211eb89ea
     divResultado.fadeIn(400);
 }
 
