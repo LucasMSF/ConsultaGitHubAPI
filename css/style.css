@@ -14,7 +14,11 @@ body {
     font-family: 'Rubik', sans-serif;
     color: rebeccapurple;
     width: 700px;
+<<<<<<< HEAD
     height: 90vh;
+=======
+    height: 800px;
+>>>>>>> eed290b30a066437aab626a771f7f09211eb89ea
     background-color: rgb(33, 34, 36);
     display: flex;
     align-items: center;
@@ -72,11 +76,14 @@ body {
 
 }
 
+<<<<<<< HEAD
 #Formulario button:hover {
     cursor: pointer;
     background-color: darkorchid;
 }
 
+=======
+>>>>>>> eed290b30a066437aab626a771f7f09211eb89ea
 #Resultado {
    margin-top: 20px;
    font-family: 'Rubik', sans-serif;
@@ -100,10 +107,13 @@ body {
 }
 */
 
+<<<<<<< HEAD
 /*
 Breaks Points que modifica os css dos elementos quando a tela atinge determinado tamanho
 Na Prática os elementos css são redimensionados quando o tamanho da tela vai diminuindo.
 */
+=======
+>>>>>>> eed290b30a066437aab626a771f7f09211eb89ea
 @media screen and (max-width: 750px) {
     #PainelPrincipal {
         width: 500px;
@@ -114,6 +124,10 @@ Na Prática os elementos css são redimensionados quando o tamanho da tela vai d
 @media screen and (max-width: 530px) {
     #PainelPrincipal {
         width: 380px;
+<<<<<<< HEAD
         height: auto;
+=======
+        height: 90%;
+>>>>>>> eed290b30a066437aab626a771f7f09211eb89ea
     }
 }
